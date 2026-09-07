@@ -5,3 +5,10 @@ node_modules/
 *.log
 .DS_Store
 Thumbs.db
+/.dart_tool/
+/build/
+/.idea/
+*.iml
+/.flutter-plugins-dependencies
+/test-artifacts/
+/android/local.properties

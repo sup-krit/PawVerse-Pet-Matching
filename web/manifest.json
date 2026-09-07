@@ -1,0 +1,35 @@
+{
+    "name": "PawVerse Matching",
+    "short_name": "PawVerse Matching",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#214f43",
+    "theme_color": "#214f43",
+    "description": "PawVerse Pet Matching local demo.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

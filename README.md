@@ -1,3 +1,38 @@
+# PawVerse Pet Matching — Flutter mobile demo
+
+Native Flutter app for Android and iOS, with a web harness for development. The original HTML prototype below is preserved as a design and interaction reference.
+
+## Run and verify
+
+Validated with Flutter 3.47.2 / Dart 3.13.2. Install Flutter and the target platform toolchain, then run:
+
+```sh
+flutter pub get
+flutter run
+flutter analyze
+flutter test
+flutter build web
+```
+
+`flutter run` uses an available device/emulator. Android needs an Android SDK; iOS requires macOS/Xcode. Neither native target was built or run in the Windows implementation environment. Web compilation and Flutter widget tests do not replace device testing.
+
+## Try the local flows
+
+- Discover as Milo: Like Poppy for a seeded mutual match, then open Matches and send a local text message.
+- Like Mochi as Milo: this stays pending and does not create a conversation. Switch to Luna: her seeded reciprocal like is Mochi.
+- Filters are per pet. Set Cats or widen distance to see different fictional candidates.
+- In a conversation, use the safety menu to unmatch or block. Block hides all pets belonging to that owner across your own pets and stops new sends.
+- My pets has Reset demo. All state also clears on process restart; messages are not delivered to real people.
+
+No sign-in, backend, persistent storage, precise location, health documents, breeding policy, payments, uploads, or Health Care synchronization is implemented. Displayed compatibility percentages are deterministic fixtures, not a production scoring engine or health claim.
+
+Architecture and scope: [ADR](docs/ADR-001-flutter-milestone.md), [milestone](docs/MILESTONE.md). `lib/domain.dart` defines the repository boundary; `demo_repository.dart` supplies in-memory behavior, `matching_view_model.dart` controls state, and `screens.dart` contains native views. Remote integration still needs explicit API and server authorization contracts.
+
+Tests cover mutual consent, duplicate mutations, pet context, block/unmatch, filters, loading/error/retry, mobile chat and 320px large-text layout. Widget tests also write ignored review captures to `test-artifacts/` using SDK fonts when available.
+
+---
+
+## Original HTML prototype documentation
 # PawVerse - Pet Matching
 
 ต้นแบบเว็บแบบโต้ตอบสำหรับแพลตฟอร์มจับคู่สัตว์เลี้ยง ช่วยให้เจ้าของค้นหาเพื่อนที่เหมาะกับสัตว์เลี้ยงของตน นัดหมายทำกิจกรรมร่วมกัน (Playdate) และสื่อสารหลังจับคู่ โดยคำนึงถึงความเข้ากันได้ สุขภาพ และความปลอดภัย
